@@ -1,0 +1,29 @@
+body {
+  background-color: #ccc;
+  color: #333;
+}
+h4 {
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+}
+
+.card {
+  float: left;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  width: 20px;
+  padding-bottom: 3px;
+  margin-right: 10px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+}
+
+.image {
+  height: 30px;
+  width: 20px;
+  background: #333;
+}
