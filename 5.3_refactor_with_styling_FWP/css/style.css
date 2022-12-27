@@ -8,7 +8,8 @@ h4 {
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  width: 50px;
+  width: 200px;
+  padding-bottom: 3px;
 }
 
 .card:hover {
@@ -19,7 +20,7 @@ h4 {
 }
 
 .image {
-  height: 50px;
-  width: 50px;
+  height: 300px;
+  width: 200px;
   background: #333;
 }
