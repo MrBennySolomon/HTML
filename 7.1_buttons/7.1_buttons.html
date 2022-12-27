@@ -5,8 +5,108 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>7.1_buttons</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      }
+    h2 {
+      margin: 50px 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    a:hover {
+      background-color: coral;
+    }
+
+    body {
+      color: white;
+      background-color: darkcyan;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    button {
+      color: white;
+      border: none;
+      font-size: 20px;
+      margin-left: 40px;
+      margin-right: 40px;
+      padding: 20px;
+    }
+    a {
+      color: white;
+      border: 1px solid black;
+      font-size: 20px;
+      margin-left: 40px;
+      margin-right: 40px;
+      padding: 20px;
+    }
+ 
+    .container {
+      text-align: center;
+    }
+
+    .flat_register {
+      background: #4c6ca0;
+    }
+    .flat_submit {
+      background: yellow;
+    }
+    .round_register {
+      border-radius: 30px;
+      background-color: greenyellow;
+    }
+    .round_submit {
+      border-radius: 30px;
+      background-color: red;
+    }
+    .flat_ghost_register {
+      background-color: darkcyan;
+      border: 2px solid red;
+    }
+    .flat_ghost_submit {
+      background-color: darkcyan;
+      border: 2px solid purple;
+    }
+    .round_ghost_register {
+      background-color: darkcyan;
+      border-radius: 30px;
+      border: 2px solid yellow;
+    }
+    .round_ghost_submit {
+      background-color: darkcyan;
+      border-radius: 30px;
+      border: 2px solid cyan;
+}
+
+  </style>
 </head>
 <body>
-  
+  <div class="container">
+    <div id="flat">
+      <h2>Flat</h2>
+      <button class="flat_register">Register</button>
+      <a class="flat_submit">Submit</a>
+    </div>
+    <div id="round">
+      <h2>Round</h2>
+      <button class="round_register">Register</button>
+      <a class="round_submit">Submit</a>
+    </div>
+    <div id="flat_ghost">
+      <h2>Flat Ghost</h2>
+      <button class="flat_ghost_register">Register</button>
+      <a class="flat_ghost_submit">Submit</a>
+    </div>
+    <div id="round_ghost">
+      <h2>Round Ghost</h2>
+      <button class="round_ghost_register">Register</button>
+      <a class="round_ghost_submit">Submit</a>
+    </div>
+  </div>
 </body>
 </html>
