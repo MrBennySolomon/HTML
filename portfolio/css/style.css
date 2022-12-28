@@ -36,3 +36,7 @@ nav {
   background-color: #4682B4;
   overflow: auto;
 }
+#showcase {
+  background: url('../img/keyboards.jpg') no-repeat center center/cover;
+  height: 600px;
+}
