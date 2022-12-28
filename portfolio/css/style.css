@@ -89,3 +89,28 @@ button {
   top: 25%;
   left: 43%;
 }
+
+#outer {
+  background-image: url(../portfolio/img/concert.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background-color: black;
+}
+
+#inner {
+  background-image: url(../portfolio/img/keyboards.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  margin: auto;
+  position: absolute;
+  top: 38%;
+  left: 38%;
+}

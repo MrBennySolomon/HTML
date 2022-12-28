@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>alignment</title>
+  <style>
+    .outer,.outer2 {
+      background-image: url(../portfolio/img/concert.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      position: relative;
+      width: 400px;
+      height: 400px;
+      background-color: black;
+    }
+
+    .inner,.inner2 {
+      background-image: url(../portfolio/img/keyboards.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 100px;
+      height: 100px;
+      background-color: white;
+      margin: auto;
+      position: absolute;
+      top: 38%;
+      left: 38%;
+    }
+    .inner, .outer {
+      float: left;
+    }
+    .inner, .outer {
+      float: right;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="outer">
+    <div class="inner"></div>
+  </div>
+  <div class="outer2">
+    <div class="inner2"></div>
+  </div>
+  
+</body>
+</html>
