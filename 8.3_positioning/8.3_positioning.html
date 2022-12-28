@@ -5,8 +5,53 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>8.3_positioning</title>
+  <style>
+    .container {
+      position: relative;
+      width: 800px;
+      height: 800px;
+    }
+    .generic_div {
+      border: 2px solid black;
+      position: absolute;
+      background-color: white;
+    }
+    .one {
+      left: 20px;
+      width: 400px;
+      height: 400px;
+      z-index: 2;
+    }
+    .two {
+
+      top: 250px;
+      left: 200px;
+      width: 350px;
+      height: 400px;
+      z-index: 3;
+    }
+    .three {
+      left: 20px;
+      top: 500px;
+      width: 770px;
+      height: 200px;
+      z-index: 4;
+    }
+    .four {
+      right: 20px;
+      width: 150px;
+      height: 800px;
+      z-index: 5;
+    }
+  </style>
 </head>
 <body>
-  
+  <div class="container">
+    <div class="generic_div one">div one</div>
+    <div class="generic_div two">div two</div>
+    <div class="generic_div three">div three</div>
+    <div class="generic_div four">div four</div>
+    
+  </div>
 </body>
 </html>
