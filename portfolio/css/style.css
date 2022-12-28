@@ -28,15 +28,26 @@ body {
   float: right;
   border-radius: 50%;
 }
-
+ul {
+  list-style: none;
+}
 h1 {
+  margin-left: 30px;
   float: left;
+  font-size: 40px;
 }
 nav {
-  background-color: #4682B4;
+  background-color: #da9134;
   overflow: auto;
 }
 #showcase {
-  background: url('../img/keyboards.jpg') no-repeat center center/cover;
+  background: url('../img/concert.jpg') no-repeat center center/cover;
   height: 600px;
+}
+.clr {
+  clear: both;
+}
+#footer {
+  background-color: #6d3322;
+  text-align: center;
 }
