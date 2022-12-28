@@ -51,3 +51,23 @@ nav {
   background-color: #6d3322;
   text-align: center;
 }
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  width: 200px;
+  padding-bottom: 3px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+}
+
+.image {
+  height: 300px;
+  width: 200px;
+  background: #333;
+  background: url('../img/keyboards.jpg') no-repeat center center/cover;
+
+}
