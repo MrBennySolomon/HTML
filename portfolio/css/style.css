@@ -43,8 +43,8 @@ nav {
 }
 #showcase {
   text-align: center;
-  background: url('../img/concert.jpg') no-repeat center center/cover;
-  height: 600px;
+  background: url('../img/concert.jpg') no-repeat top center/cover;
+  height: 550px;
 }
 .clr {
   clear: both;
@@ -59,8 +59,18 @@ nav {
   padding-bottom: 3px;
   height: auto;
   margin: 0 auto;
-  padding: 10px;
   position: relative;
+}
+.flat_ghost_submit {
+  background-color: #6d3322;
+  border: 2px solid #da9134;
+}
+a {
+  text-decoration: none;
+  color: #da9134;
+}
+.inner {
+  color: #6d3322;
 }
 
 .card:hover {
@@ -74,3 +84,6 @@ nav {
 
 }
 
+button {
+  text-decoration: none;
+}
