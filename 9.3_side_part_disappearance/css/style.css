@@ -7,7 +7,7 @@
 }
 
 @media (max-width:800px) {
-  #box-2 { 
+  .container #box-2 { 
     width: 100%;
   }
   #box-3 { 

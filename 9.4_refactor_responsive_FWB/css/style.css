@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: #33151b;
+  background-color: #6d3322;
+}
+
+@media (max-width:800px) {
+  .container h1 { 
+    display: none;
+  }
+  .container img { 
+    margin: 0 40%;
+  }
+  .card {
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+  }
+}
+
+@media (max-width:1933px) {
+  body #showcase .card {
+    margin: 0 auto;
+    top: 0;
+    position: relative;
+    left: auto;
+  }
+}
+@media (max-width:400px) {
+  body {
+    display: none;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  width: 20px;
+  padding-bottom: 3px;
+  margin-right: 10px;
+} 
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+
+#profile {
+  float: right;
+  border-radius: 50%;
+}
+ul {
+  list-style: none;
+}
+h1 {
+  margin-left: 30px;
+  float: left;
+  font-size: 40px;
+}
+nav {
+  background-color: #da9134;
+  overflow: auto;
+}
+#showcase {
+  text-align: center;
+  background: url('../img/concert.jpg') no-repeat top center/cover;
+  height: 80vh;
+  position: relative;
+}
+.clr {
+  clear: both;
+}
+#footer {
+  background-color: #6d3322;
+  text-align: center;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  width: 200px;
+  padding-bottom: 3px;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+}
+.card img {
+  height: 200px;
+  width: 200px;
+}
+.flat_ghost_submit {
+  background-color: #6d3322;
+  border: 2px solid #da9134;
+}
+a {
+  text-decoration: none;
+  color: #da9134;
+}
+.inner {
+  color: #6d3322;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+button {
+  text-decoration: none;
+}
+
+#showcase .card {
+  position: absolute;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  top: 25%;
+  left: 43%;
+}
+
+#outer {
+  background-image: url(../portfolio/img/concert.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background-color: black;
+}
+
+#inner {
+  background-image: url(../portfolio/img/keyboards.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  margin: auto;
+  position: absolute;
+  top: 38%;
+  left: 38%;
+}
