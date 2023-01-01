@@ -1,12 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>9.2_mobile_responsive</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>9.2_mobile_responsive</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container-all {
+        position: relative;
+      }
+      .container1,
+      .container2,
+      .container3,
+      .container4 {
+        display: inline-block;
+        background-color: coral;
+        width: 24vw;
+        height: 25vh;
+        border: 3px solid black;
+        padding: 20px;
+      }
+      @media screen and (max-width:820px) {
+        .container1,
+        .container2,
+        .container3,
+        .container4 {
+          display: block;
+          width: 100vw;
+          height: 25vh;
+          margin: 0 auto;
+        }
+      }
+    
+    </style>
+  </head>
+  <body>
+    <div class="container-all">
+      <div class="container1">
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos ea
+          velit, distinctio explicabo repellat impedit esse amet aliquam dolore
+
+        </p>
+      </div>
+      <div class="container2">
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos ea
+          velit, distinctio explicabo repellat impedit esse amet aliquam dolore
+
+        </p>
+      </div>
+      <div class="container3">
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos ea
+          velit, distinctio explicabo repellat impedit esse amet aliquam dolore
+
+        </p>
+      </div>
+      <div class="container4">
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos ea
+          velit, distinctio explicabo repellat impedit esse amet aliquam dolore
+        </p>
+      </div>
+    </div>
+  </body>
 </html>
