@@ -6,7 +6,9 @@
 
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
+
 @media screen and (min-width: 320px) {
   html {
     font-size: calc(16px + 6 * ((100vw - 320px) / 680));
@@ -33,10 +35,12 @@ body {
     margin: 0 auto;
     position: absolute;
     top: 0;
+    background-color: #da9134;
   }
+
   body .small-screen h1 {
     background-color: #da9134;
-    color: #6d3322;
+    color: #33151b;
   }
   body .small-screen {
     border-top: 0.5rem solid #6d3322;
@@ -53,6 +57,7 @@ body {
     top: 0;
     position: relative;
     left: auto;
+    background-color: #da9134;
   }
 
 }
@@ -60,6 +65,11 @@ body {
   body {
     display: none;
   }
+}
+
+.landing-page {
+  width: 100vw;
+  height: 100vh;
 }
 
 .card {
@@ -175,4 +185,61 @@ button {
   position: absolute;
   top: 38%;
   left: 38%;
+}
+
+.scroll {
+  align-items: center;
+  color: #da9134;
+  font-family: Montserrat, serif;
+  position: fixed;
+  bottom: 0;
+  right: 50%;
+}
+
+.scroll .f-page {
+  color: #da9134;
+}
+
+.scroll__icon {
+  font-size: 80px;
+  animation: down 2s infinite;
+  transform: translateY(-10px);
+}
+
+.scroll__icon::after {
+  z-index: -1;
+}
+
+.scroll a {
+  text-decoration: none;
+  color: #33151b;
+  animation-name: wellcom;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+.wellcom-message {
+  font-size: 400%;
+  text-align: center;
+  max-width: 100vw;
+  min-height: 90vh;
+  animation-name: wellcom;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+@keyframes wellcom {
+  from {
+    color: #6d3322;
+  }
+  to {
+    color: #33151b;
+  }
+}
+.name {
+  color: #da9134;
+}
+.scroll .f-page{
+  text-align: center;
 }
