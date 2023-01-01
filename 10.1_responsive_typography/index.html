@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10.1_responsive_typography</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 16px;
+      }
+      @media screen and (min-width: 320px) {
+        html {
+          font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+        }
+      }
+      @media screen and (min-width: 1000px) {
+        html {
+          font-size: 22px;
+        }
+      }
+
+      body {
+        color: white;
+      }
+      .container {
+        width: 100vw;
+        height: 100vh;
+        background-color: #333;
+
+        text-align: center;
+      }
+
+      .container h1 {
+        font-size: 3rem;
+      }
+      .container p {
+        font-size: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem,
+        reprehenderit.
+      </h1>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit
+        asperiores doloremque qui, cum accusantium eum in veritatis architecto
+        obcaecati repellat magni temporibus laboriosam modi libero. Alias at
+        illum cupiditate, ratione quibusdam nihil laboriosam asperiores,
+        deleniti, obcaecati dolor perferendis in? Porro nisi eius maiores
+        aperiam ad assumenda sed molestias minima veritatis.
+      </p>
+    </div>
+  </body>
+</html>
