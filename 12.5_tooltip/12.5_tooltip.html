@@ -5,8 +5,55 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>12.5_tooltip</title>
-</head>
-<body>
-  
-</body>
-</html>
+  <style>
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      border-bottom: 1px dotted black;
+    }
+    
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 120px;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+      position: absolute;
+      z-index: 1;
+      bottom: 150%;
+      left: 50%;
+      margin-left: -60px;
+    }
+    
+    .tooltip .tooltiptext::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: black transparent transparent transparent;
+    }
+    
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+    }
+    </style>
+    <sp style="text-align:center;">
+    
+    <h2>Top Tooltip w/ Bottom Arrow</h2>
+    
+    <div class="tooltip">HELLO
+      <span class="tooltiptext">Tooltip text</span>
+      
+    </div>    
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis 
+    <div class="tooltip">alias
+      <span class="tooltiptext">Tooltip text</span>
+      
+    </div>, consequatur quae doloremque aspernatur corrupti quo! Assumenda nemo fuga deleniti impedit doloribus dolor, molestias debitis? Natus beatae vitae tempora tenetur.
+    </body>
+    </html>
