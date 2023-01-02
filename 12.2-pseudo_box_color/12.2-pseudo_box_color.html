@@ -5,8 +5,29 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>12.2-pseudo_box_color</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .box1::before {
+      content: '';
+      width: 150px;
+      height: 300px;
+      top: 0;
+      left: 0;
+      background-color: lightgreen;
+      position: absolute;
+    }
+    .box1 {
+      width: 300px;
+      height: 300px;
+      background-color: coral;
+    }
+  </style>
 </head>
 <body>
-  
+  <div class="box1"></div>
 </body>
 </html>
