@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .color:focus {
+      outline-color: #2294d6;
+    }
+
+    .container {
+      display: flex;
+      align-content: center;
+      align-items: center;
+      justify-content: center;
+      width: 100vw;
+      height: 100vh;
+      background-color: #356e64;
+    }
+    input {
+      align-self: center;
+    }
+    label {
+      color: white;
+    }
+    form {
+      align-items: center;
+    }
+    .btn {
+      text-decoration: none;
+      border: none;
+      color: #2294d6;
+      text-align: center;
+      padding: 10px 20px;
+      border: #2294d6 3px solid;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <form action="">
+      <label for="fname">First name:</label>
+      <input class="color" type="text" id="fname" name="fname"><br><br>
+      <label for="lname">Last name:</label>
+      <input class="color" type="text" id="lname" name="lname"><br><br>
+      <input class="color btn" type="submit" value="Submit">
+    </form>
+  </div>
+</body>
+</html>
