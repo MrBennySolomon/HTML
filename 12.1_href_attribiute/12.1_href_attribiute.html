@@ -5,8 +5,25 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>12.1_href_attribiute</title>
+  <style>
+    a[href="seven"]::after {
+      content: "::afrer WORKS!!!";
+      background-color: yellow;
+      color: red;
+      font-weight: bold;
+      
+    }
+  </style>
 </head>
 <body>
-  
+  <ul>
+    <li><a href="one">1</a></li>
+    <li><a href="two">2</a></li>
+    <li><a href="three">3</a></li>
+    <li><a href="four">4</a></li>
+    <li><a href="five">5</a></li>
+    <li><a href="six">6</a></li>
+    <li><a href="seven">7</a></li>
+  </ul>
 </body>
 </html>
