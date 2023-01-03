@@ -52,6 +52,9 @@
       align-self: center;
       background-color: red;
       transition: height 2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .translatey:hover::before {
       height: 10rem;
@@ -71,6 +74,9 @@
       align-self: center;
       background-color: blue;
       transition: width 2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .translatex:hover::before {
       width: 30rem;
@@ -93,6 +99,7 @@
         border-radius: 10px;
         overflow: hidden;
         padding: 2rem;
+        color: white;
       }
 
         .rotate::before {
@@ -112,33 +119,15 @@
             linear-gradient(#399953, #399953);
           /* animation: rotate 3s linear infinite; */
           z-index: -1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
         .rotate:hover::before {
           animation: rotate 3s forwards 1;
           z-index: 5;
         }
 
-        /* .rotate::after {
-          content: "";
-          position: absolute;
-          z-index: -1;
-          left: 6px;
-          top: 6px;
-          width: 30rem;
-          height: 10rem;
-          background: white;
-          border-radius: 5px;
-          animation: opacityChange 5s infinite alternate;
-        } */
-
-      /* @keyframes opacityChange {
-        50% {
-          opacity: 1;
-        }
-        100% {
-          opacity: 0.5;
-        }
-      } */
       .realrotate {
         position: relative;
         z-index: 0;
@@ -163,7 +152,9 @@
       transform: translate(50%, 50%);
       transition: all 1s;
       z-index: 2;
-    
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .realrotate:hover::before {
@@ -184,30 +175,152 @@
 
     .scale::before {
       content: "Scale";
-      
-      text-align: center;
       top: 0rem;
       left: 0rem;
       width: 30rem;
       height: 10rem;
       z-index: -1;
       position: absolute;
-      transition: opacity 2s ease-in-out;
-      transition: font-size 2s ease-in-out;
+      transition: all 2s;
       color: white;
-      opacity: 1;
+      opacity: 0;
       z-index: -5;
-    
+      font-size: 20rem;
+      background-color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .scale:hover::before {
-      background-color: black;
-      color: white;
+      
       opacity: 1;
-      /* font-size: 1rem; */
+      font-size: 2.5rem;
       z-index: 2;
     }
+/*  */
+    /* html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+} */
 
+.glow-on-hover {
+    width: 30rem;
+    height: 10rem;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: lightgray;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+/*  */
+
+.skew::before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    background-color: #c800ff;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    transform:  skew(0,0);
+    transition: all 1s;
+    z-index: -1;
+    
+}
+.skew{
+    transition: all 1s;
+    overflow: hidden;
+}
+
+.skew:hover {
+    transform:  skewY(-5deg);
+}
+.skew:hover::before{
+    transform:  skew(180deg,180deg);
+    left: 0;
+    top:0;
+    width: 30rem/*15.5rem*/;
+    height: 10rem/*7.5rem*/;
+
+}
+
+.skew::after {
+    content: "";
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: transform 1s;
+}
+
+.skew:hover::after {
+    transform:  skewY(10deg) translate(-50%,-50%);
+ 
+}
 
   </style>
 </head>
@@ -221,6 +334,7 @@
     <button class="realrotate">RealRotate</button>
     <button class="scale">Scale</button>
     <button class="skew">Skew</button>
+    <button class="glow-on-hover" type="button">Click & Hover</button>
   </div>
   
 </body>
