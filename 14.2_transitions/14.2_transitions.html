@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>14.1_simple_transition</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      font-size: 62.5%;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100vw;
+      height: 100vh;
+    }
+    .box::before {
+      content: "";
+      width: 10rem;
+      height: 10rem;
+      position: absolute;
+      background-color: coral;
+      transition: width 2s ease;
+    }
+    .box:hover::before {
+      width: 0rem;
+    }
+    .box {
+      width: 10rem;
+      height: 10rem;
+      background-color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="group1">
+    <button class="translateY">translateY</button>
+    <button class="translateX">translateX</button>
+    <button class="rotate">Rotate</button>
+  </div>
+  <div class="group2">
+    <button class="scale">Scale</button>
+    <button class="skew">Skew</button>
+  </div>
+  
+</body>
+</html>
