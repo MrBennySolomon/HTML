@@ -5,8 +5,95 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>14.3_navbar_animation</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 62.5%;
+    }
+    .navbar {
+      display: flex;
+      justify-content: center;
+      
+
+    }
+
+    a, ul {
+      display: flex;
+      text-decoration: none;
+      list-style: none;
+    }
+    li {
+      padding: 2rem;
+      margin: 0 1rem;   
+      position: relative;
+    }
+    a {
+      color: black;
+      font-size: 1.8rem;
+    }
+
+    .Home::before,
+    .About::before,
+    .Services::before,
+    .Portfolio::before,
+    .Contact::before{
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0.2rem;
+      top: 0;
+      left: 0;
+      background-color: black;
+      transition: width 0.5s ease;
+      
+    }
+    .Home::after,
+    .About::after,
+    .Services::after,
+    .Portfolio::after,
+    .Home::after,
+    .Contact::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0.2rem;
+      right: 0;
+      bottom: 0;
+      background-color: black;
+      transition: width 0.5s ease;
+    }
+    .Home:hover::before,
+    .About:hover::before,
+    .Services:hover::before,
+    .Portfolio:hover::before,
+    .Home:hover::before,
+    .Contact:hover::before {
+      width: 100%;
+    }
+    .Home:hover::after,
+    .About:hover::after,
+    .Services:hover::after,
+    .Portfolio:hover::after,
+    .Home:hover::after,
+    .Contact:hover::after {
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
-  
+  <nav class="navbar">
+    <ul>
+      <li><a class="Home" href="#">Home</a></li>
+      <li><a class="About" href="#">About</a></li>
+      <li><a class="Services" href="#">Services</a></li>
+      <li><a class="Portfolio" href="#">Portfolio</a></li>
+      <li><a class="Contact" href="#">Contact</a></li>
+    </ul>
+  </nav>
 </body>
 </html>
