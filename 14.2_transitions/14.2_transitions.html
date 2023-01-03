@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>14.1_simple_transition</title>
+  <title>14.2_transitions</title>
   <style>
     * {
       margin: 0;
@@ -153,14 +153,14 @@
       content: "";
       
       text-align: center;
-      top: -5rem;
-      left: 0rem;
-      width: 30rem;
-      height: 40rem;
+      top: 0rem;
+      left: -10rem;
+      width: 10rem;
+      height: 30rem;
       z-index: -1;
       position: absolute;
       background-color: yellow;
-      transform: translate(-30rem);
+      transform: translate(50%, 50%);
       transition: all 1s;
       z-index: 2;
     
@@ -168,8 +168,45 @@
 
     .realrotate:hover::before {
       transform: rotate(-90deg);
+      transform-origin: top right;
     } 
 
+   
+    .scale {
+        position: relative;
+        z-index: 0;
+        width: 30rem;
+        height: 10rem;
+        border-radius: 10px;
+        overflow: hidden;
+        padding: 2rem;
+      }
+
+    .scale::before {
+      content: "Scale";
+      
+      text-align: center;
+      top: 0rem;
+      left: 0rem;
+      width: 30rem;
+      height: 10rem;
+      z-index: -1;
+      position: absolute;
+      transition: opacity 2s ease-in-out;
+      transition: font-size 2s ease-in-out;
+      color: white;
+      opacity: 1;
+      z-index: -5;
+    
+    }
+
+    .scale:hover::before {
+      background-color: black;
+      color: white;
+      opacity: 1;
+      /* font-size: 1rem; */
+      z-index: 2;
+    }
 
 
   </style>
