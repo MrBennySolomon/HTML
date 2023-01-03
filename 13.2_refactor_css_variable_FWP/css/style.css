@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary-color: #6d3322;
+  --secondary-color: #da9134;
+  --dark-color: #33151b;
+}
+
 html {
   font-size: 16px;
   scroll-behavior: smooth;
@@ -20,8 +26,8 @@ html {
   }
 }
 body {
-  color: #33151b;
-  background-color: #6d3322;
+  color: var(--dark-color);
+  background-color: var(--primary-color);
 }
 
 @media (max-width:800px) {
@@ -35,15 +41,15 @@ body {
     margin: 0 auto;
     position: absolute;
     top: 0;
-    background-color: #da9134;
+    background-color: var(--secondary-color);
   }
 
   body .small-screen h1 {
-    background-color: #da9134;
-    color: #33151b;
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
   }
   body .small-screen {
-    border-top: 0.5rem solid #6d3322;
+    border-top: 0.5rem solid var(--primary-color);
   }
   body nav {
     background-color: transparent;
@@ -57,7 +63,7 @@ body {
     top: 0;
     position: relative;
     left: auto;
-    background-color: #da9134;
+    background-color: var(--secondary-color);
   }
 
 }
@@ -95,8 +101,8 @@ body .small-screen {
   background-color: #333;
 }
 .small-screen h1 {
-  color: #6d3322;
-  background-color: #6d3322;
+  color: var(--primary-color);
+  background-color: var(--primary-color);
   text-align: center;
 }
 .container h1 {
@@ -105,7 +111,7 @@ body .small-screen {
   font-size: 40px;
 }
 nav {
-  background-color: #da9134;
+  background-color: var(--secondary-color);
   overflow: auto;
 }
 #showcase {
@@ -118,7 +124,7 @@ nav {
   clear: both;
 }
 #footer {
-  background-color: #6d3322;
+  background-color: var(--primary-color);
   text-align: center;
 }
 .card {
@@ -134,15 +140,15 @@ nav {
   width: 200px;
 }
 .flat_ghost_submit {
-  background-color: #6d3322;
-  border: 2px solid #da9134;
+  background-color: var(--primary-color);
+  border: 2px solid var(--secondary-color);
 }
 a {
   text-decoration: none;
-  color: #da9134;
+  color: var(--secondary-color);
 }
 .inner {
-  color: #6d3322;
+  color: var(--primary-color);
 }
 
 .card:hover {
@@ -189,7 +195,7 @@ button {
 
 .scroll {
   align-items: center;
-  color: #da9134;
+  color: var(--secondary-color);
   font-family: Montserrat, serif;
   position: fixed;
   bottom: 0;
@@ -197,7 +203,7 @@ button {
 }
 
 .scroll .f-page {
-  color: #da9134;
+  color: var(--secondary-color);
 }
 
 .scroll__icon {
@@ -212,7 +218,7 @@ button {
 
 .scroll a {
   text-decoration: none;
-  color: #33151b;
+  color: var(--dark-color);
   animation-name: wellcom;
   animation-duration: 3s;
   animation-iteration-count: infinite;
@@ -231,14 +237,14 @@ body {
 }
 @keyframes wellcom {
   from {
-    color: #6d3322;
+    color: var(--primary-color);
   }
   to {
-    color: #33151b;
+    color: var(--dark-color);
   }
 }
 .name {
-  color: #da9134;
+  color: var(--secondary-color);
 }
 .scroll .f-page{
   text-align: center;
