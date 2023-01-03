@@ -77,36 +77,7 @@
       z-index: 10;
     }
 
-    /* .rotate::before {
-      content: "";
-      
-      text-align: center;
-      top: 0;
-      left: 60rem;
-      width: 30rem;
-      height: 10rem;
-      z-index: -1;
-      position: absolute;
-      align-self: center;
-      background-color: yellow;
     
-    }
-
-    @keyframes rotate {
-      0% {
-        -webkit-transform: rotate3d(0, 1, 0, 0deg);
-        transform: rotate3d(0, 1, 0, 90deg);
-      }
-      100% {
-        -webkit-transform: rotate3d(0, 1, 0, 0deg);
-        }
-      }
-    .rotate:hover::before {
-      width: 30rem;
-      z-index: 10;
-      transform: rotate(90deg);
-      animation: rotate 3s normal linear forwards;
-    } */
 
     @keyframes rotate {
         100% {
@@ -136,13 +107,15 @@
           background-repeat: no-repeat;
           background-size: 50% 50%, 50% 50%;
           background-position: 0 0, 100% 0, 100% 100%, 0 100%;
-          background-image: linear-gradient(#399953, #399953),
+          background-image: linear-gradient(#377af5, #377af5),
             linear-gradient(#fbb300, #fbb300), linear-gradient(#d53e33, #d53e33),
-            linear-gradient(#377af5, #377af5);
-          animation: rotate 3s linear infinite;
+            linear-gradient(#399953, #399953);
+          /* animation: rotate 3s linear infinite; */
+          z-index: -1;
         }
         .rotate:hover::before {
-          animation: rotate 3s linear infinite;
+          animation: rotate 3s forwards 1;
+          z-index: 5;
         }
 
         /* .rotate::after {
@@ -158,14 +131,46 @@
           animation: opacityChange 5s infinite alternate;
         } */
 
-      @keyframes opacityChange {
+      /* @keyframes opacityChange {
         50% {
           opacity: 1;
         }
         100% {
           opacity: 0.5;
         }
+      } */
+      .realrotate {
+        position: relative;
+        z-index: 0;
+        width: 30rem;
+        height: 10rem;
+        border-radius: 10px;
+        overflow: hidden;
+        padding: 2rem;
       }
+
+    .realrotate::before {
+      content: "";
+      
+      text-align: center;
+      top: -5rem;
+      left: 0rem;
+      width: 30rem;
+      height: 40rem;
+      z-index: -1;
+      position: absolute;
+      background-color: yellow;
+      transform: translate(-30rem);
+      transition: all 1s;
+      z-index: 2;
+    
+    }
+
+    .realrotate:hover::before {
+      transform: rotate(-90deg);
+    } 
+
+
 
   </style>
 </head>
@@ -176,6 +181,7 @@
     <button class="rotate">Rotate</button>
   </div>
   <div class="group2">
+    <button class="realrotate">RealRotate</button>
     <button class="scale">Scale</button>
     <button class="skew">Skew</button>
   </div>
