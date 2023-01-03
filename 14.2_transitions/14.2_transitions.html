@@ -19,31 +19,160 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-direction: column;
       width: 100vw;
       height: 100vh;
     }
-    .box::before {
-      content: "";
-      width: 10rem;
+
+    .group1, .group2 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    button {
+      
+      width: 30rem;
       height: 10rem;
+      font-size: 2.5rem;
+      text-align: center;
+      
+    }
+    
+    .translatey::before {
+      content: "Cool!";
+      text-align: center;
+      top: 0;
+      left: 0;
+      width: 30rem;
+      height: 0rem;
+      z-index: -1;
       position: absolute;
-      background-color: coral;
+      align-self: center;
+      background-color: red;
+      transition: height 2s ease;
+    }
+    .translatey:hover::before {
+      height: 10rem;
+      z-index: 10;
+    }
+
+    .translatex::before {
+      content: "TranslateX";
+      
+      text-align: center;
+      top: 0;
+      left: 30rem;
+      width: 0rem;
+      height: 10rem;
+      z-index: -1;
+      position: absolute;
+      align-self: center;
+      background-color: blue;
       transition: width 2s ease;
     }
-    .box:hover::before {
-      width: 0rem;
+    .translatex:hover::before {
+      width: 30rem;
+      z-index: 10;
     }
-    .box {
-      width: 10rem;
+
+    /* .rotate::before {
+      content: "";
+      
+      text-align: center;
+      top: 0;
+      left: 60rem;
+      width: 30rem;
       height: 10rem;
-      background-color: #333;
+      z-index: -1;
+      position: absolute;
+      align-self: center;
+      background-color: yellow;
+    
     }
+
+    @keyframes rotate {
+      0% {
+        -webkit-transform: rotate3d(0, 1, 0, 0deg);
+        transform: rotate3d(0, 1, 0, 90deg);
+      }
+      100% {
+        -webkit-transform: rotate3d(0, 1, 0, 0deg);
+        }
+      }
+    .rotate:hover::before {
+      width: 30rem;
+      z-index: 10;
+      transform: rotate(90deg);
+      animation: rotate 3s normal linear forwards;
+    } */
+
+    @keyframes rotate {
+        100% {
+          transform: rotate(1turn);
+        }
+      }
+
+      .rotate {
+        position: relative;
+        z-index: 0;
+        width: 30rem;
+        height: 10rem;
+        border-radius: 10px;
+        overflow: hidden;
+        padding: 2rem;
+      }
+
+        .rotate::before {
+          content: "";
+          position: absolute;
+          z-index: -2;
+          left: -50%;
+          top: -50%;
+          width: 200%;
+          height: 500%;
+          background-color: #399953;
+          background-repeat: no-repeat;
+          background-size: 50% 50%, 50% 50%;
+          background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+          background-image: linear-gradient(#399953, #399953),
+            linear-gradient(#fbb300, #fbb300), linear-gradient(#d53e33, #d53e33),
+            linear-gradient(#377af5, #377af5);
+          animation: rotate 3s linear infinite;
+        }
+        .rotate:hover::before {
+          animation: rotate 3s linear infinite;
+        }
+
+        /* .rotate::after {
+          content: "";
+          position: absolute;
+          z-index: -1;
+          left: 6px;
+          top: 6px;
+          width: 30rem;
+          height: 10rem;
+          background: white;
+          border-radius: 5px;
+          animation: opacityChange 5s infinite alternate;
+        } */
+
+      @keyframes opacityChange {
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0.5;
+        }
+      }
+
   </style>
 </head>
 <body>
   <div class="group1">
-    <button class="translateY">translateY</button>
-    <button class="translateX">translateX</button>
+    <button class="translatey">TranslateY</button>
+    <button class="translatex">TranslateX</button>
     <button class="rotate">Rotate</button>
   </div>
   <div class="group2">
