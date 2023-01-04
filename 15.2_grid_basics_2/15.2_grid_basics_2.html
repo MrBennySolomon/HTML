@@ -17,14 +17,17 @@
     }
 
     .grid-container {
+      width: 50vw;
+      height: 100vh;
       background-color: #fff;
       padding: 1rem;
       display: grid;
+      grid-template-columns: 2 250px 3 1fr;
       grid-template-rows: 8rem 8rem 8rem;
       grid-template-areas: 
-      'red-color red-color red-color blue-color blue-color blue-color'
-      'green-color green-color purple-color purple-color purple-color purple-color'
-      'yellow-color yellow-color yellow-color yellow-color yellow-color yellow-color'
+      'red-color red-color red-color red-color'
+      'blue-color blue-color green-color green-color'
+      'blue-color blue-color purple-color purple2-color'
       ;
       gap: 1rem;
     }
@@ -45,9 +48,9 @@
       grid-area: purple-color;
       background-color: purple;
     }
-    .yellow {
-      grid-area: yellow-color;
-      background-color: yellow;
+    .purple2 {
+      grid-area: purple2-color;
+      background-color: purple;
     }
     .grid-container > div {
       border-radius: 1rem;
@@ -62,7 +65,7 @@
     <div class="blue"></div>
     <div class="green"></div>
     <div class="purple"></div>
-    <div class="yellow"></div>
+    <div class="purple2"></div>
   </div>
 
 </body>
