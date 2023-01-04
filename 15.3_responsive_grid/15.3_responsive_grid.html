@@ -5,8 +5,110 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>15.3_responsive_grid</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 62.5%;
+    }
+
+    .grid-container {
+      background-color: #fff;
+      padding: 1rem;
+      display: grid;
+      width: 100vw;
+      height: 100vh;
+      grid-template-rows: 4rem 8rem 4rem 4rem 8rem;
+      grid-template-areas: 
+      'red-color red-color red-color red-color'
+      'blue-color green-color green-color purple-color'
+      'yellow-color yellow-color yellow-color yellow-color'
+      ;
+      gap: 1rem;
+    }
+
+    @media(max-width: 500px) {
+      .grid-container > div {
+          width: 100vw;
+        }
+      .grid-container {
+        
+        grid-template-columns: 1fr;
+        grid-template-rows: 4rem 4rem 8rem 4rem 4rem;
+        grid-template-areas: 
+        'red-color'
+        'blue-color'
+        'green-color'
+        'purple-color'
+        'yellow-color'
+        ;
+
+      }
+    }
+
+    @media(max-width: 800px) and (min-width: 501px) {
+      .grid-container {
+        grid-template-areas: 
+        'red-color red-color red-color red-color'
+        'blue-color green-color green-color green-color'
+        'purple-color purple-color purple-color purple-color'
+        'yellow-color yellow-color yellow-color yellow-color'
+        ;
+
+        }
+
+      }
+
+      @media(min-width: 801px) {
+      .grid-container {
+        grid-template-areas: 
+        'red-color red-color red-color red-color'
+        'blue-color green-color green-color purple-color'
+        'yellow-color yellow-color yellow-color yellow-color'
+        ;
+
+      }
+    }
+    .red {
+      grid-area: red-color;
+      background-color: red;
+    }
+    .blue {
+      grid-area: blue-color;
+      background-color: blue;
+    }
+    .green {
+      grid-area: green-color;
+      background-color: green;
+      
+    }
+    .purple {
+      grid-area: purple-color;
+      background-color: purple;
+    }
+    .yellow {
+      grid-area: yellow-color;
+      background-color: yellow;
+    }
+    .grid-container > div {
+      border-radius: 1rem;
+    }
+
+  </style>
 </head>
-<body>
-  
-</body>
+
+  <body>
+    <div class="grid-container">
+      <div class="red"></div>
+      <div class="blue"></div>
+      <div class="green"></div>
+      <div class="purple"></div>
+      <div class="yellow"></div>
+    </div>
+
+  </body>
 </html>
