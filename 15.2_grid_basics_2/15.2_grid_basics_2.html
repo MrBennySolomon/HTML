@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>15.2_grid_basics2</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 62.5%;
+    }
+
+    .grid-container {
+      background-color: #fff;
+      padding: 1rem;
+      display: grid;
+      grid-template-rows: 8rem 8rem 8rem;
+      grid-template-areas: 
+      'red-color red-color red-color blue-color blue-color blue-color'
+      'green-color green-color purple-color purple-color purple-color purple-color'
+      'yellow-color yellow-color yellow-color yellow-color yellow-color yellow-color'
+      ;
+      gap: 1rem;
+    }
+    .red {
+      grid-area: red-color;
+      background-color: red;
+    }
+    .blue {
+      grid-area: blue-color;
+      background-color: blue;
+    }
+    .green {
+      grid-area: green-color;
+      background-color: green;
+      
+    }
+    .purple {
+      grid-area: purple-color;
+      background-color: purple;
+    }
+    .yellow {
+      grid-area: yellow-color;
+      background-color: yellow;
+    }
+    .grid-container > div {
+      border-radius: 1rem;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="grid-container">
+    <div class="red"></div>
+    <div class="blue"></div>
+    <div class="green"></div>
+    <div class="purple"></div>
+    <div class="yellow"></div>
+  </div>
+
+</body>
+</html>
