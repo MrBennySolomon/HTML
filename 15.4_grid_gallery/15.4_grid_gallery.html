@@ -16,54 +16,171 @@
       font-size: 62.5%;
     }
 
-    .grid-container {
-      background-color: #fff;
-      padding: 1rem;
-      display: grid;
-      grid-template-rows: 8rem 8rem 8rem;
-      grid-template-areas: 
-      'red-color red-color red-color blue-color blue-color blue-color'
-      'green-color green-color purple-color purple-color purple-color purple-color'
-      'yellow-color yellow-color yellow-color yellow-color yellow-color yellow-color'
-      ;
-      gap: 1rem;
-    }
-    .red {
-      grid-area: red-color;
-      background-color: red;
-    }
-    .blue {
-      grid-area: blue-color;
-      background-color: blue;
-    }
-    .green {
-      grid-area: green-color;
-      background-color: green;
-      
-    }
-    .purple {
-      grid-area: purple-color;
-      background-color: purple;
-    }
-    .yellow {
-      grid-area: yellow-color;
-      background-color: yellow;
-    }
-    .grid-container > div {
-      border-radius: 1rem;
+    .gallery {
+        width: 80vw;
+        display: grid;
+        grid-template-columns: repeat(16, 1fr);
+        grid-template-rows: repeat(7, 1fr);
+        grid-gap: 15px;
     }
 
-  </style>
-</head>
+    .gallery__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 
-<body>
-  <div class="grid-container">
-    <div class="red"></div>
-    <div class="blue"></div>
-    <div class="green"></div>
-    <div class="purple"></div>
-    <div class="yellow"></div>
-  </div>
+    .gallery__item--1 {
+        grid-column-start: 1;
+        grid-column-end: 6;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
 
-</body>
+    .gallery__item--2 {
+        grid-column-start: 6;
+        grid-column-end: 12;
+        grid-row-start: 1;
+        grid-row-end: 4;
+    }
+
+    .gallery__item--3 {
+        grid-column-start: 12;
+        grid-column-end: 14;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+    .gallery__item--4 {
+        grid-column-start: 14;
+        grid-column-end: 18;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+    .gallery__item--5 {
+        grid-column-start: 1;
+        grid-column-end: 6;
+        grid-row-start: 3;
+        grid-row-end: 6;
+    }
+    .gallery__item--6 {
+        grid-column-start: 6;
+        grid-column-end: 9;
+        grid-row-start: 4;
+        grid-row-end: 6;
+    }
+    .gallery__item--7 {
+        grid-column-start: 9;
+        grid-column-end: 12;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+    .gallery__item--8 {
+        grid-column-start: 12;
+        grid-column-end: 15;
+        grid-row-start: 3;
+        grid-row-end: 5;
+    }
+    .gallery__item--9 {
+        grid-column-start: 15;
+        grid-column-end: 18;
+        grid-row-start: 3;
+        grid-row-end: 6;
+    }
+    .gallery__item--10 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 6;
+        grid-row-end: 8;
+    }
+    .gallery__item--11 {
+        grid-column-start: 3;
+        grid-column-end: 7;
+        grid-row-start: 6;
+        grid-row-end: 8;
+    }
+    .gallery__item--12 {
+        grid-column-start: 7;
+        grid-column-end: 9;
+        grid-row-start: 6;
+        grid-row-end: 8;
+    }
+    .gallery__item--13 {
+        grid-column-start: 9;
+        grid-column-end: 15;
+        grid-row-start: 5;
+        grid-row-end: 8;
+    }
+    .gallery__item--14 {
+        grid-column-start: 15;
+        grid-column-end: 17;
+        grid-row-start: 6;
+        grid-row-end: 8;
+    }
+
+      /* Responsive layout - makes a two column-layout instead of four columns */
+      @media screen and (max-width: 800px) {
+        .column {
+          flex: 50%;
+          max-width: 50%;
+        }
+      }
+
+      /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 600px) {
+        .column {
+          flex: 100%;
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="gallery">
+      <figure class="gallery__item gallery__item--1">
+        <img src="./1.jpeg" class="gallery__img" alt="Image 1">
+      </figure>
+      <figure class="gallery__item gallery__item--2">
+        <img src="./2.jpeg" class="gallery__img" alt="Image 2">
+      </figure>
+      <figure class="gallery__item gallery__item--3">
+        <img src="./3.jpeg" class="gallery__img" alt="Image 3">
+      </figure>
+      <figure class="gallery__item gallery__item--4">
+        <img src="./4.jpeg" class="gallery__img" alt="Image 4">
+      </figure>
+      <figure class="gallery__item gallery__item--5">
+        <img src="./5.jpeg" class="gallery__img" alt="Image 5">
+      </figure>
+      <figure class="gallery__item gallery__item--6">
+        <img src="./6.jpeg" class="gallery__img" alt="Image 6">
+      </figure>
+      <figure class="gallery__item gallery__item--7">
+        <img src="./7.jpeg" class="gallery__img" alt="Image 7">
+      </figure>
+      <figure class="gallery__item gallery__item--8">
+        <img src="./8.jpeg" class="gallery__img" alt="Image 8">
+      </figure>
+      <figure class="gallery__item gallery__item--9">
+        <img src="./9.jpeg" class="gallery__img" alt="Image 9">
+      </figure>
+      <figure class="gallery__item gallery__item--10">
+        <img src="./10.jpeg" class="gallery__img" alt="Image 10">
+      </figure>
+      <figure class="gallery__item gallery__item--11">
+        <img src="./11.jpeg" class="gallery__img" alt="Image 11">
+      </figure>
+      <figure class="gallery__item gallery__item--12">
+        <img src="./12.jpeg" class="gallery__img" alt="Image 12">
+      </figure>
+      <figure class="gallery__item gallery__item--13">
+        <img src="./13.jpeg" class="gallery__img" alt="Image 13">
+      </figure>
+      <figure class="gallery__item gallery__item--14">
+        <img src="./14.jpeg" class="gallery__img" alt="Image 14">
+      </figure>
+    </div>
+  </body>
 </html>
